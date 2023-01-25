@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate a Quote</title>
+</head>
+    <style>
+        body{
+            margin: 0%;
+            overflow-x: hidden;
+            padding: 0%;
+            background: #FEDEFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .btn{
+            margin-block: 25px;
+            padding: 30px;
+            width: 400px;
+            font-size: 25px;
+            font-weight: 700;
+            background-color: #fff;
+            border: 2px solid #000;
+            border-radius: 0px 50% / 50%;
+            cursor: pointer;
+            transform: scale(0.9);
+            /* transition: 1s ease-in 0.5s; */
+            box-shadow: 1px 1px 10px #000;
+        }
+    </style>
+<body>
+
+</body>
+<script>
+    const body = document.querySelector("body");
+    const qBtn = document.createElement("button");
+
+    qBtn.innerText = "💫 Generate a Quote 💫"
+    qBtn.className = "btn";
+    body.appendChild(qBtn);
+
+    
+    let arrQuote = [
+        "The greatest glory in living lies not in never falling, but in rising every time we fall. -Nelson Mandela",
+        "The way to get started is to quit talking and begin doing. -Walt Disney",
+        "Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma – which is living with the results of other people's thinking. -Steve Jobs", 
+        "If life were predictable it would cease to be life, and be without flavor. -Eleanor Roosevelt",
+        "If you look at what you have in life, you'll always have more. If you look at what you don't have in life, you'll never have enough. -Oprah Winfrey",
+        "If you set your goals ridiculously high and it's a failure, you will fail above everyone else's success. -James Cameron",
+        "Life is what happens when you're busy making other plans. -John Lennon",
+        "Spread love everywhere you go. Let no one ever come to you without leaving happier. -Mother Teresa",
+        "When you reach the end of your rope, tie a knot in it and hang on. -Franklin D. Roosevelt",
+        "Tell me and I forget. Teach me and I remember. Involve me and I learn. -Benjamin Franklin",
+        "“The best and most beautiful things in the world cannot be seen or even touched — they must be felt with the heart.” — Helen Keller",
+        "💥💥Friendship Quotes 💥💥",
+        "“Happiness can be found even in the darkest of times, if one only remembers to turn on the light.” — Dumbledore",
+        "“A real friend is one who walks in when the rest of the world walks out.” — Walter Winchell",
+        "“A friend is someone who understands your past, believes in your future, and accepts you just the way you are.” — Unknown",
+        "“It’s not what we have in life, but who we have in our life that matters.” — Unknow",
+        "“A friend who understands your tears is much more valuable than a lot of friends who only know your smile.” — Unknown",
+        "“A friend is one of the best things you can be and the greatest things you can have.” — Sarah Valdez",
+        "“Time doesn’t take away from friendship, nor does separation.” — Tennessee Williams",
+        "“When the world is so complicated, the simple gift of friendship is within all of our hands.” — Maria Shriver",
+        "“It’s the friends you can call up at 4 a.m. that matter.” — Marlene Dietrich",
+        "“True friends are never apart, maybe in distance but never in heart.” — Helen Keller",
+        "“No friendship is an accident.” — O. Henry",
+        "“Friends are the siblings God never gave us.” — Mencius",
+        "“Life was meant for good friends and great adventures.” — Unknown",
+
+    ];
+    
+    const quote = document.createElement("h1");
+    quote.style.padding = "25px";
+    quote.style.height = "500px";
+    quote.style.width = "500px";
+    quote.style.textAlign = "center";
+    quote.style.marginTop = "100px";
+
+    let i=0;
+    qBtn.addEventListener("click", () => {
+        if (i === arrQuote.length)  {
+            i = 0;
+        }
+        if (i < arrQuote.length) {
+            quote.innerText = arrQuote[i];
+            i++;
+        }
+        console.log(i);
+        body.appendChild(quote);
+    });
+
+</script>
+</html>
