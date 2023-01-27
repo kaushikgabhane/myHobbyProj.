@@ -9,6 +9,7 @@ const  screen = document.querySelector('.screen');
 arr.forEach((btn) => {
    
     btn.addEventListener("click", (e) => {
+
         let x = e.target;
         if (x.innerText == '=') {
             value = eval(value);

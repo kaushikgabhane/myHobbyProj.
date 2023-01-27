@@ -67,6 +67,11 @@ body{
     cursor: pointer;    
     
 }
+.calc-btns:focus{
+    transform: scale(0.9);
+    transition: 0.2s ease-in-out ;
+    background-color: #a1c9e0;
+}
 .btn-oprt{
     background-color: #57be7e;
     color: #fff;
