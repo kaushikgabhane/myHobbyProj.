@@ -12,12 +12,17 @@ arr.forEach((btn) => {
         let x = e.target;
         if (x.innerText == '=') {
             value = eval(value);
-            console.log(value);
+            // console.log(value);
             screen.innerHTML = value;
         }
         else if (x.innerText == 'AC') {
             screen.innerHTML = " ";
             value = " ";
+        }
+        else if (x.innerText == 'clear') {
+            value = [...value].slice(0,-1).join('');
+            screen.innerText = value;
+            // console.log(value);
         }
         else{
             value = value + x.innerText;
