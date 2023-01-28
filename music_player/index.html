@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/594087ed79.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./favicon (2).ico" type="image/x-icon">
+    <title>Music player</title>
+</head>
+<body class="max-w-fit">
+    <div class="container w-full h-screen m-0 bg-[#32215]  overflow-y-hidden">
+        <nav class="navbar w-2/12 h-screen fixed top-0 bottom-0 bg-[#000]">
+            <div class="logo pt-5 pl-5">
+                <img src="./assets/Logo.png" alt="logo">
+            </div>
+            <div class="nav-items  text-white  flex flex-col gap-5 pt-10 pl-5 justify-center">
+                <a href="">
+                    <i class="fa-sharp fa-solid fa-house"></i>
+                    <span class="pl-5 font-bold ">Home</span>
+                </a> 
+                <a href="" class="hover:text-white text-[#758283]">
+                    <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                    <span class="pl-5 font-bold">Search</span>
+                </a> 
+                <a href="" class="hover:text-white  text-[#758283]">
+                    <i class="fa-sharp fa-solid fa-folder-open"></i>
+                    <span class="pl-5 font-bold"> Your library</span>
+                </a> 
+                <a href="" class="hover:text-white text-[#758283]">
+                    <i class="fa-sharp fa-solid fa-plus"></i>
+                    <span class="pl-5 font-bold">Create playlist</span>
+                </a> 
+                <a href="" class="hover:text-white text-[#758283]">
+                    <i class="fa-sharp fa-solid fa-heart"></i>
+                    <span class="pl-5 font-bold ">Liked songs</span>
+                </a> 
+                <div class="terms text-xs flex flex-col gap-3 relative top-44">
+                    <a href="" class="hover:underline">Privacy</a>
+                    <a href="" class="hover:underline">Terms</a>
+                </div>
+            </div>
+        </nav>
+
+        <section class=" header  w-[83%] absolute top-0 left-[225px] ">
+            <div class="flex justify-between  bg-[#000]  sticky top-0  z-10">
+                <div class=" pl-10 py-5">
+                    <button class="bg-[#434242] rounded-full">
+                        <a href="">
+                            <i class="fa-sharp fa-solid fa-chevron-left px-5 text-white"></i>
+                        </a>
+                    </button>
+                    <button class="bg-[#434242] rounded-full">
+                        <a href="">
+                            <i class="fa-sharp fa-solid fa-chevron-right px-5 text-white"></i>
+                        </a>
+                    </button>
+                </div>
+                <div class="sign-in-btn mr-5 mt-2">
+                    <a href=""><button class=" p-3 hover:bg-[#fff]  rounded-full w-32 font-bold text-white hover:text-[#000]">Sign Up</button></a>
+                    <a href=""><button class="p-3 hover:bg-[#fff] rounded-full w-32 font-bold text-white hover:text-[#000]">Login</button></a>
+                </div>
+            </div>
+
+            <article class=" bg-[#000d] ">
+                <div class="Classic">
+                    <div class="Classic-heading px-3 py-5 justify-between align-center flex">
+                        <h1 class="text-white  font-bold ml-5 text-3xl">Songs Available</h1>
+                        <a href="" class="font-bold text-[#758fff] p-3 text-xs hover:text-white">SHOW ALL</a>
+                    </div>
+                    <div class="cards grid grid-rows-4 grid-cols-3 gap-y-5 place-content-center		">
+                        
+                        <div class="card1  bg-[#0005] h-[250px] w-[300px] ml-8 rounded-2xl hover:bg-[#0009] flex flex-col justify-center items-center shadow-3xl hover:shadow-red-900">
+                            <img src="./assets/emmeli-m-rmyatHqpuOQ-unsplash.jpg" alt="bg" class="bg-cover bg-bottom h-[150px] w-[250px] p-3">
+                            <h2 class="text-white font-bold text-start">Aabaad-Barbaad</h2>
+                            <audio src="./Latest one's/Aabaad-Barbaad_320(PaglaSongs).mp3" controls class="w-[250px] h-[30px] bg-red"></audio>
+                        </div>
+
+                        <div class="card2  bg-[#0005] h-[250px] w-[300px] ml-8 rounded-2xl hover:bg-[#0009] flex flex-col justify-center items-center">
+                            <img src="./assets/mitchell-orr-tqduB9EwoY8-unsplash.jpg" alt="bg" class="bg-cover bg-bottom h-[150px] w-[250px] p-3">
+                            <h2 class="text-white font-bold text-start">Agar-Tum-Saath-Ho</h2>
+                            <audio src="./Latest one's/Agar-Tum-Saath-Ho_320(PaglaSongs).mp3" controls class="w-[250px] h-[30px] bg-[#0002]"></audio>
+                        </div>
+
+                        <div class="card3  bg-[#0005] h-[250px] w-[300px] ml-8 rounded-2xl hover:bg-[#0009] flex flex-col justify-center items-center">
+                            <img src="./assets/pexels-artūras-kokorevas-14683126.jpg" alt="bg" class="bg-cover bg-bottom h-[150px] w-[250px] p-3">
+                            <h2 class="text-white font-bold text-start">Bandook Meri Laila</h2>
+                            <audio src="./Latest one's/Bandook Meri Laila - A Gentleman 320Kbps.mp3" controls class="w-[250px] h-[30px] bg-[#0002]"></audio>
+                        </div>
+
+                        <div class="card4  bg-[#0005] h-[250px] w-[300px] ml-8 rounded-2xl hover:bg-[#0009] flex flex-col justify-center items-center">
+                            <img src="./assets/pexels-bade-saba-13945391.jpg" alt="bg" class="bg-cover bg-bottom h-[150px] w-[250px] p-3">
+                            <h2 class="text-white font-bold text-start">Daru-Badnaam-Karti</h2>
+                            <audio src="./Latest one's/Daru-Badnaam-Karti_320(PaglaSongs).mp3" controls class="w-[250px] h-[30px] bg-[#0002]"></audio>
+                        </div>
+
+                        <div class="card5  bg-[#0005] h-[250px] w-[300px] ml-8 rounded-2xl hover:bg-[#0009] flex flex-col justify-center items-center">
+                            <img src="./assets/pexels-ensaio-da-cegueira-14188784.jpg" alt="bg" class="bg-cover bg-bottom h-[150px] w-[250px] p-3">
+                            <h2 class="text-white font-bold text-start">Tu-Aake-Dekhle</h2>
+                            <audio src="./Latest one's/Tu-Aake-Dekhle_320(PaglaSongs).mp3" controls class="w-[250px] h-[30px] bg-[#0002]"></audio>
+                        </div>
+
+                        <div class="card6  bg-[#0005] h-[250px] w-[300px] ml-8 rounded-2xl hover:bg-[#0009] flex flex-col justify-center items-center">
+                            <img src="./assets/pexels-olena-bohovyk-13350113.jpg" alt="bg" class="bg-cover bg-bottom h-[150px] w-[250px] p-3">
+                            <h2 class="text-white font-bold text-start">Kya-Mujhe-Pyaar-Hai</h2>
+                            <audio src="./Latest one's/Kya-Mujhe-Pyaar-Hai_320(PaglaSongs).mp3" controls class="w-[250px] h-[30px] bg-[#0002]"></audio>
+                        </div>
+
+                        <div class="card6  bg-[#0005] h-[250px] w-[300px] ml-8 rounded-2xl hover:bg-[#0009] flex flex-col justify-center items-center">
+                            <img src="./assets/pexels-sami-abdullah-14213816.jpg" alt="bg" class="bg-cover bg-bottom h-[150px] w-[250px] p-3">
+                            <h2 class="text-white font-bold text-start">Rahe na rahe hum</h2>
+                            <audio src="./Classic Bollywood/rahe na rahe hum.mpeg" controls class="w-[250px] h-[30px] bg-[#0002]"></audio>
+                        </div>
+
+                        <div class="card7  bg-[#0005] h-[250px] w-[300px] ml-8 rounded-2xl hover:bg-[#0009] flex flex-col justify-center items-center">
+                            <img src="./assets/ryan-loughlin-bYUZ_4-Qi8U-unsplash.jpg" alt="bg" class="bg-cover bg-bottom h-[150px] w-[250px] p-3">
+                            <h2 class="text-white font-bold text-start">O-Saathi-Re</h2>
+                            <audio src="./Classic Bollywood/O-Saathi-Re_320(PaglaSongs).mp3" controls class="w-[250px] h-[30px] bg-[#0002]"></audio>
+                        </div>
+
+                        <div class="card8  bg-[#0005] h-[250px] w-[300px] ml-8 rounded-2xl hover:bg-[#0009] flex flex-col justify-center items-center">
+                            <img src="./assets/wolfgang-hasselmann-C_RdMv_P79Y-unsplash.jpg" alt="bg" class="bg-cover bg-bottom h-[150px] w-[250px] p-3">
+                            <h2 class="text-white font-bold text-start">Neele-Neele-Ambar-Par</h2>
+                            <audio src="./Classic Bollywood/Neele-Neele-Ambar-Par-Kishore-Kumar_320(PaglaSongs).mp3" controls class="w-[250px] h-[30px] bg-[#0002]"></audio>
+                        </div>
+
+                        <div class="card9  bg-[#0005] h-[250px] w-[300px] ml-8 rounded-2xl hover:bg-[#0009] flex flex-col justify-center items-center col-span-full	">
+                            <img src="./assets/simon-spring-qqvlV5WOnls-unsplash.jpg" alt="bg" class="bg-cover bg-bottom h-[150px] w-[250px] p-3">
+                            <h2 class="text-white font-bold text-start">Matkar-Maya-Ko-Ahankar</h2>
+                            <audio src="./Classic Bollywood/Matkar-Maya-Ko-Ahankar_320(PaglaSongs).mp3" controls class="w-[250px] h-[30px] bg-[#0002]"></audio>
+                        </div>
+                    </div>
+                </div>
+    
+            </article>
+        </section>
+        
+    </div>
+    
+</body>
+</html>
