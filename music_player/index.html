@@ -20,10 +20,10 @@
                     <i class="fa-sharp fa-solid fa-house"></i>
                     <span class="pl-5 font-bold ">Home</span>
                 </a> 
-                <a href="" class="hover:text-white text-[#758283]">
+                <p class=" nav-search hover:text-white text-[#758283] cursor-pointer">
                     <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
                     <span class="pl-5 font-bold">Search</span>
-                </a> 
+                </p> 
                 <a href="" class="hover:text-white  text-[#758283]">
                     <i class="fa-sharp fa-solid fa-folder-open"></i>
                     <span class="pl-5 font-bold"> Your library</span>
@@ -45,17 +45,17 @@
 
         <section class=" header  w-[83%] absolute top-0 left-[225px] ">
             <div class="flex justify-between  bg-[#000]  sticky top-0  z-10">
-                <div class=" pl-10 py-5">
+                <div class=" pl-10 py-5 flex gap-3">
                     <button class="bg-[#434242] rounded-full">
-                        <a href="">
-                            <i class="fa-sharp fa-solid fa-chevron-left px-5 text-white"></i>
-                        </a>
+                        <i class="fa-sharp fa-solid fa-chevron-left px-5 text-white"></i>
                     </button>
                     <button class="bg-[#434242] rounded-full">
-                        <a href="">
-                            <i class="fa-sharp fa-solid fa-chevron-right px-5 text-white"></i>
-                        </a>
+                        <i class="fa-sharp fa-solid fa-chevron-right px-5 text-white"></i>
                     </button>
+                    <div class="search-bar ml-44">
+                        <i class="fa-solid fa-magnifying-glass text-white"></i>
+                        <input type="search" name="search song" id="search" placeholder="Search here.." class="bg-[#434242] rounded-full outline-gray-700 p-2 caret-white">
+                    </div>
                 </div>
                 <div class="sign-in-btn mr-5 mt-2">
                     <a href=""><button class=" p-3 hover:bg-[#fff]  rounded-full w-32 font-bold text-white hover:text-[#000]">Sign Up</button></a>
@@ -139,4 +139,5 @@
     </div>
     
 </body>
+<script src="./script.js"></script>
 </html>
