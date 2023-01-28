@@ -1,10 +1,7 @@
 let searchBar = document.querySelector(".search-bar");
-searchBar.style.visibility = "hidden";
-
-
-
-
 let navSearch = document.querySelector(".nav-search");
+
+searchBar.style.visibility = "hidden";
 navSearch.addEventListener("click", ()=>{
     searchBar.style.visibility = "visible";
 });
