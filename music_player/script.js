@@ -1,7 +1,11 @@
-let searchBar = document.querySelector(".search-bar");
-let navSearch = document.querySelector(".nav-search");
+const like_btn_list = document.getElementsByClassName("like-btn");
 
-searchBar.style.visibility = "hidden";
-navSearch.addEventListener("click", ()=>{
-    searchBar.style.visibility = "visible";
+const like_btn = [...like_btn_list];
+console.log(like_btn);
+
+like_btn.forEach(element => {
+    element.style.cursor = "pointer";
+    element.addEventListener("click",()=>{
+        element.style.color = "red";
+    });
 });
