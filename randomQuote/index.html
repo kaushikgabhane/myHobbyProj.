@@ -4,33 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/594087ed79.js" crossorigin="anonymous"></script>
     <title>Generate a Quote</title>
 </head>
     <style>
+
         body{
+            height: max-content;
             margin: 0%;
-            overflow-x: hidden;
+            overflow: hidden;
             padding: 0%;
-            background: #FEDEFF;
+            background: linear-gradient(215deg,
+                #000066 0%,
+                #57006b 7%,
+                #8a0067 18%,
+                #b8005f 31%,
+                #db0054 47%,
+                hsl(357deg 91% 59%) 64%,
+                #ff692e 79%,
+                #ff970f 89%,
+                #ffbf00 96%,
+                #ffea00 100%
+                );
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            font-family: 'Roboto Slab', serif;
+        }
+            .area{
+            min-height: 60vh;
+            max-height: max-content;
+            width: 60vw;
+            margin-bottom: 70px;
+            border: 25px solid #4da7d1;
+            background-color: #000;
+            word-spacing: 10px;
+            line-height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .btn{
             margin-block: 25px;
-            padding: 30px;
-            width: 400px;
+            padding-inline: 30px;
+            padding-block: 20px;
             font-size: 25px;
             font-weight: 700;
             background-color: #fff;
+            color: royalblue;
             border: 2px solid #000;
-            border-radius: 0px 50% / 50%;
+            border-radius: 20px; 
             cursor: pointer;
-            transform: scale(0.9);
-            /* transition: 1s ease-in 0.5s; */
-            box-shadow: 1px 1px 10px #000;
+            box-shadow: inset 1px 1px 10px #000;
+        }
+        .btn:hover{
+            transform: scale(0.8);
+            transition : 0.2s ease-out 0.2s;
+        }
+        @media (width <= 768px){
+            body{
+                overflow: scroll;
+            }
         }
     </style>
 <body>
@@ -40,23 +76,23 @@
     const body = document.querySelector("body");
     const qBtn = document.createElement("button");
 
-    qBtn.innerText = "💫 Generate a Quote 💫"
+    qBtn.innerText = "❤️ Quotes 💚"
     qBtn.className = "btn";
     body.appendChild(qBtn);
 
     
     let arrQuote = [
-        "The greatest glory in living lies not in never falling, but in rising every time we fall. -Nelson Mandela",
-        "The way to get started is to quit talking and begin doing. -Walt Disney",
-        "Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma – which is living with the results of other people's thinking. -Steve Jobs", 
-        "If life were predictable it would cease to be life, and be without flavor. -Eleanor Roosevelt",
-        "If you look at what you have in life, you'll always have more. If you look at what you don't have in life, you'll never have enough. -Oprah Winfrey",
-        "If you set your goals ridiculously high and it's a failure, you will fail above everyone else's success. -James Cameron",
-        "Life is what happens when you're busy making other plans. -John Lennon",
-        "Spread love everywhere you go. Let no one ever come to you without leaving happier. -Mother Teresa",
-        "When you reach the end of your rope, tie a knot in it and hang on. -Franklin D. Roosevelt",
-        "Tell me and I forget. Teach me and I remember. Involve me and I learn. -Benjamin Franklin",
-        "“The best and most beautiful things in the world cannot be seen or even touched — they must be felt with the heart.” — Helen Keller",
+        "“ The greatest glory in living lies not in never falling, but in rising every time we fall.” -Nelson Mandela",
+        "“ The way to get started is to quit talking and begin doing.” -Walt Disney",
+        "“ Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma – which is living with the results of other people's thinking.” -Steve Jobs", 
+        "“ If life were predictable it would cease to be life, and be without flavor.” -Eleanor Roosevelt",
+        "“ If you look at what you have in life, you'll always have more. If you look at what you don't have in life, you'll never have enough.” -Oprah Winfrey",
+        "“ If you set your goals ridiculously high and it's a failure, you will fail above everyone else's success.” -James Cameron",
+        "“ Life is what happens when you're busy making other plans.” -John Lennon",
+        "“ Spread love everywhere you go. Let no one ever come to you without leaving happier.” -Mother Teresa",
+        "“ When you reach the end of your rope, tie a knot in it and hang on.” -Franklin D. Roosevelt",
+        "“ Tell me and I forget. Teach me and I remember. Involve me and I learn.” -Benjamin Franklin",
+        "“ The best and most beautiful things in the world cannot be seen or even touched — they must be felt with the heart.” — Helen Keller",
         "💥💥Friendship Quotes 💥💥",
         "“Happiness can be found even in the darkest of times, if one only remembers to turn on the light.” — Dumbledore",
         "“A real friend is one who walks in when the rest of the world walks out.” — Walter Winchell",
@@ -74,13 +110,17 @@
 
     ];
     
+    const area = document.createElement("div");
+    area.classList = "area";
+    // console.log(area);
+    body.appendChild(area);
+
     const quote = document.createElement("h1");
     quote.style.padding = "25px";
-    quote.style.height = "500px";
-    quote.style.width = "500px";
     quote.style.textAlign = "center";
     quote.style.marginTop = "100px";
-
+    quote.style.color = "#fff";
+    
     let i=0;
     qBtn.addEventListener("click", () => {
         if (i === arrQuote.length)  {
@@ -90,9 +130,9 @@
             quote.innerText = arrQuote[i];
             i++;
         }
-        console.log(i);
-        body.appendChild(quote);
+        
+        area.appendChild(quote);
     });
-
+    
 </script>
 </html>
