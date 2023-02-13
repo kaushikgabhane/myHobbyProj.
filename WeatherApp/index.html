@@ -4,47 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./favicon (2).ico" type="image/x-icon">
+
+    <script src="https://kit.fontawesome.com/594087ed79.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="stylesheet" href="./utiles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <title>Weather App</title>
 </head>
 <body>
-    <div class="container">
-        <aside aria-label="Today's-forecast" class="today's-forecast">
+    <div class="container" onload="getData()">
+        <aside aria-label="Today's-forecast" class="today-forecast">
             <article class="search-bar">
                 <input type="text" id="input-city">
-                <i class="fa-sharp fa-solid fa-magnifying-glass"></i>           
+                <button type="submit" id="submit">
+                    <i class="fa-sharp fa-solid fa-magnifying-glass"></i>       
+                </button>
             </article>
-            <section class="today's-temp">
+            <section class="today-temp card">
                 <h4>Today's temp.</h4>
-                <p>--- <span>&#8451</span></p>
+                <var>--- <span>&#8451</span></var>
             </section>
-            <section class="today's-temp">
-                <div>
-                    <h4>High temp.</h4>
-                    <p>--- <span>&#8451</span></p>
-                </div>
-                <div>
-                    <h4>Low temp.</h4>
-                    <p>--- <span>&#8451</span></p>
-                </div>
+            <section class="today-high-temp card">
+                <h4>High temp.</h4>
+                <var>--- <span>&#8451</span></var>
             </section>
-            <section class="today's-humidity">
+            <section class="today-low-temp card">
+                <h4>Low temp.</h4>
+                <var>--- <span>&#8451</span></var>
+            </section>
+            <section class="today-humidity card">
                 <h4>Humidity</h4>
-                <p>--- %</p>
+                <var>--- %</var>
             </section>
-            <section class="today's-rain-chance">
+            <section class="today-rain-chance card">
                 <h4>Rain chances</h4>
-                <p>--- %</p>
+                <var>--- %</var>
             </section>
         </aside>
 
-        <main class="main-section" class="main">
+        <main class="main-section">
             <section aria-label="weather-forecast" class="weather-forecast">
                 <div class="forecast-details">
                     <h1>Weather Forecast</h1>
                     <span>country</span> 
                     <span>state</span>
-                    <p>City name, <span>Date and time</span></p> 
+                    <p>City name, <var>Date and time</var></p> 
                 </div>
                 <div class="forecast-img">
                     <img src="" alt="">
@@ -52,13 +61,73 @@
             </section>
 
             <section aria-label="Hourly forecast" class="hourly-forecast">
-                <article >
-                    <img src="" alt="">
-                    <p>Temp. <span>&#8451</span></p>
-                </article>
+                <div class="wrapper">
+                    <article class="hourly-forecast-card">
+                        <p class="hours">Hours</p>
+                        <img src="" alt="">
+                        <var>Temp. <span>&#8451</span></var>
+                    </article>
+                    <article class="hourly-forecast-card">
+                        <p class="hours">Hours</p>
+                        <img src="" alt="">
+                        <var>Temp. <span>&#8451</span></var>
+                    </article>
+                    <article class="hourly-forecast-card">
+                        <p class="hours">Hours</p>
+                        <img src="" alt="">
+                        <var>Temp. <span>&#8451</span></var>
+                    </article>
+                    <article class="hourly-forecast-card">
+                        <p class="hours">Hours</p>
+                        <img src="" alt="">
+                        <var>Temp. <span>&#8451</span></var>
+                    </article>
+                    <article class="hourly-forecast-card">
+                        <p class="hours">Hours</p>
+                        <img src="" alt="">
+                        <var>Temp. <span>&#8451</span></var>
+                    </article>
+                    <article class="hourly-forecast-card">
+                        <p class="hours">Hours</p>
+                        <img src="" alt="">
+                        <var>Temp. <span>&#8451</span></var>
+                    </article>
+                    <article class="hourly-forecast-card">
+                        <p class="hours">Hours</p>
+                        <img src="" alt="">
+                        <var>Temp. <span>&#8451</span></var>
+                    </article>
+                    <article class="hourly-forecast-card">
+                        <p class="hours">Hours</p>
+                        <img src="" alt="">
+                        <var>Temp. <span>&#8451</span></var>
+                    </article>
+                    <article class="hourly-forecast-card">
+                        <p class="hours">Hours</p>
+                        <img src="" alt="">
+                        <var>Temp. <span>&#8451</span></var>
+                    </article>
+                    <article class="hourly-forecast-card">
+                        <p class="hours">Hours</p>
+                        <img src="" alt="">
+                        <var>Temp. <span>&#8451</span></var>
+                    </article>
+                    <article class="hourly-forecast-card">
+                        <p class="hours">Hours</p>
+                        <img src="" alt="">
+                        <var>Temp. <span>&#8451</span></var>
+                    </article>
+                    <article class="hourly-forecast-card">
+                        <p class="hours">Hours</p>
+                        <img src="" alt="">
+                        <var>Temp. <span>&#8451</span></var>
+                    </article>
+                </div>
+                <div class="scroll"></div>
             </section>
         </main>
         
     </div>
 </body>
+<script src="./script.js"></script>
 </html>

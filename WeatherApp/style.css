@@ -1,0 +1,108 @@
+body{
+    padding: 0%;
+    margin: 0%;
+    overflow: hidden;
+    display:flex;
+    justify-content: center;
+    background-color: #615b5b;
+    background-blend-mode:exclusion ;
+    font-family: 'Roboto Mono', monospace;
+}
+
+
+.container{
+    height: 90vh;
+    width: 90vw;
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-area: "aside main main" ;
+    background-image: url(./Assets/rain.jpg);
+    background-size: cover;
+    background-position: top;
+    /* background-repeat:repeat(2); */
+    border-radius: 20px;
+
+}
+
+.today-forecast{
+    grid-column: 1/2;
+    background-color: #d3d3d3;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    opacity: .6;
+    border-right: 5px solid ;
+    border-color: #000000 ;
+    z-index: 0;
+}
+.search-bar{
+    width: max-content;
+    background: transparent;
+    border: 2px solid #0b0e0f;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+#input-city{
+    outline: none;
+    border: none;
+    height: 50px;
+    font-size:medium;
+}
+
+#submit{
+    height: 100%;
+    width: 50px;
+}
+
+
+/* main section */
+.main-section{
+    grid-column: 2/4;
+}
+
+.weather-forecast{
+    margin-top: 100px;
+}
+
+.forecast-details{
+    width: 90%;
+    margin-inline: auto;
+}
+.forecast-details h1{
+    font-size: 40px;
+}
+
+.wrapper{
+    width: 90%;
+    height: 25%;
+    padding-inline: 16px;
+    /* background-color: #fff; */
+    border-radius: 5px;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-color: #d5ac68 #f1db9d;
+    scrollbar-width:5px;
+}
+
+.scroll{
+   background-color: #f1db9d;
+   height: 2px;
+   width: 100%;
+   position: relative;
+   top: -3px;
+   z-index: -10;
+}
+
