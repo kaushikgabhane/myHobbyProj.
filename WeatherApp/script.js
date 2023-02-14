@@ -1,6 +1,7 @@
 
 const container = document.querySelector(".container");
 const hourlyForecast = document.querySelectorAll(".hourly-forecast-card");
+const hourlyTemp = document.querySelectorAll(".hoursDetails :first-child");
 const inputCity = document.getElementById("input-city");
 const today_temp = document.querySelector(".today-temp var");
 const today_feels_like = document.querySelector(".today-feels-like var");
@@ -12,13 +13,10 @@ const country = document.querySelector(".forecast-details :nth-child(2)");
 const stateName = document.querySelector(".forecast-details :nth-child(3)");
 const cityName = document.querySelector(".forecast-details :nth-child(4)");
 const date = document.querySelector(".forecast-details :nth-child(5)");
+const detailsIcon = document.querySelector(".forecast-img img");
 
 let data;
 
-const forecastDetails = [...hourlyForecast];
-
-const hours = forecastDetails.map( ele => ele.firstElementChild);
-// console.log(hours);
 
 const getData = async (event) => {
   event.preventDefault();
@@ -51,6 +49,7 @@ const getData = async (event) => {
   stateName.innerHTML = data.location.region;
   date.textContent = data.location.localtime;
   cityName.innerHTML = data.location.name;
+  detailsIcon.setAttribute(`src`,`${data.current.condition.icon}`);
 
 
 // Change Background
@@ -67,7 +66,38 @@ const getData = async (event) => {
     container.className = "mist";
   }else if (x === 'Rain') {
     container.className = "rain";
+  }else{
+    container.className = 'container';
   }
 
+    // Hourly forecast
+    const forecastDetails = [...hourlyForecast];
+
+    const hours = forecastDetails.map( ele => ele.firstElementChild);
+    const icon = forecastDetails.map(ele => ele.firstElementChild.nextElementSibling);
+    const htemp =[...hourlyTemp].map(ele => ele);
+    // console.log(icon);
+    // console.log(hours);
+    // console.log(htemp);
+    const fetchHourlyData = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=4ef401b35b964cab89c120253231102&q=${city}`);
+
+    const hourlyData = await fetchHourlyData.json();
+    const Data = hourlyData;
+  
+    
+    for(let i=0; i<=24; i++){
+
+      // for hourly time
+      const y = Data.forecast.forecastday[0].hour[i].time;
+      let z = y.split(" ")[1];
+      hours[i].textContent = z;
+      // console.log(hours[i]);
+
+      // setting icon
+      icon[i].setAttribute('src',`${Data.forecast.forecastday[0].hour[i].condition.icon}`);
+      
+      // setting hourly temp.
+      htemp[i].textContent = Data.forecast.forecastday[0].hour[i].temp_c;
+    }
 
 };
