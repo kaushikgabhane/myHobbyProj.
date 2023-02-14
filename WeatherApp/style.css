@@ -17,12 +17,62 @@ body{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-area: "aside main main" ;
-    background-image: url(./Assets/rain.jpg);
-    background-size: cover;
-    background-position: top;
     /* background-repeat:repeat(2); */
     border-radius: 20px;
 
+}
+
+.clear{
+    height: 90vh;
+    width: 90vw;
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-area: "aside main main" ;
+    /* background-repeat:repeat(2); */
+    border-radius: 20px;
+    background-image: url(./Assets/clear\ sky.jpg);
+    background-size: cover;
+    background-position: top;
+}
+.mist{
+    height: 90vh;
+    width: 90vw;
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-area: "aside main main" ;
+    /* background-repeat:repeat(2); */
+    border-radius: 20px;
+    background-image: url(./Assets/mistWeather.jpg);
+    background-size: cover;
+    background-position: top;
+}
+.cloudy{
+    height: 90vh;
+    width: 90vw;
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-area: "aside main main" ;
+    /* background-repeat:repeat(2); */
+    border-radius: 20px;
+    background-image: url(./Assets/cloudy\ wheather.jpg);
+    background-size: cover;
+    background-position: top;
+}
+.rain{
+    height: 90vh;
+    width: 90vw;
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-area: "aside main main" ;
+    /* background-repeat:repeat(2); */
+    border-radius: 20px;
+    background-image: url(./Assets/rain.jpg);
+    background-size: cover;
+    background-position: top;
 }
 
 .today-forecast{
@@ -43,12 +93,15 @@ body{
 .search-bar{
     width: max-content;
     background: transparent;
-    border: 2px solid #0b0e0f;
+    border-bottom: 5px solid #c705f8;
+    border-left: 5px solid #f80505;
+    border-top: 5px solid #1a9744;
+    border-right: 5px solid #f80505;
     width: 60%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* justify-content: center; */
+    border-radius: 12px;
 }
 
 #input-city{
@@ -56,13 +109,23 @@ body{
     border: none;
     height: 50px;
     font-size:medium;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+#input-city::placeholder{
+    color: #616161;
+    font-weight: 700;
 }
 
 #submit{
     height: 100%;
     width: 50px;
+    background-color: #fff;
+    border: none;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
-
 
 /* main section */
 .main-section{
@@ -81,6 +144,11 @@ body{
     font-size: 40px;
 }
 
+.forecast-details :nth-child(2){
+    font-weight: 600;
+    font-size: large;
+}
+
 .wrapper{
     width: 90%;
     height: 25%;
@@ -97,12 +165,6 @@ body{
     scrollbar-width:5px;
 }
 
-.scroll{
-   background-color: #f1db9d;
-   height: 2px;
-   width: 100%;
-   position: relative;
-   top: -3px;
-   z-index: -10;
+.wrapper::-webkit-scrollbar{
+    width: 0px;
 }
-

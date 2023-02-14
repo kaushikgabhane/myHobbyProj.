@@ -17,33 +17,38 @@
     <title>Weather App</title>
 </head>
 <body>
-    <div class="container" onload="getData()">
+    <div class="container">
         <aside aria-label="Today's-forecast" class="today-forecast">
-            <article class="search-bar">
-                <input type="text" id="input-city">
+            <form class="search-bar" onsubmit="getData(event)">
+                <input type="text" id="input-city" placeholder="Enter your city name ">
                 <button type="submit" id="submit">
                     <i class="fa-sharp fa-solid fa-magnifying-glass"></i>       
                 </button>
-            </article>
+            </form>
             <section class="today-temp card">
                 <h4>Today's temp.</h4>
-                <var>--- <span>&#8451</span></var>
+                <var>---</var>
+                <span>&#8451</span>
             </section>
-            <section class="today-high-temp card">
-                <h4>High temp.</h4>
-                <var>--- <span>&#8451</span></var>
+            <section class="today-feels-like card">
+                <h4>Feels like</h4>
+                <var>--- </var>
+                <span>&#8451</span>
             </section>
-            <section class="today-low-temp card">
-                <h4>Low temp.</h4>
-                <var>--- <span>&#8451</span></var>
+            <section class="today-wind-speed card">
+                <h4>Wind speed</h4>
+                <var>--- </var>
+                <span>km/hr</span>
             </section>
             <section class="today-humidity card">
                 <h4>Humidity</h4>
-                <var>--- %</var>
+                <var>---</var>
+                <span>%</span>
             </section>
             <section class="today-rain-chance card">
                 <h4>Rain chances</h4>
-                <var>--- %</var>
+                <var>---</var>
+                <span>%</span>
             </section>
         </aside>
 
@@ -53,7 +58,8 @@
                     <h1>Weather Forecast</h1>
                     <span>country</span> 
                     <span>state</span>
-                    <p>City name, <var>Date and time</var></p> 
+                    <p>City name</p>
+                    <var>Date & time</var>
                 </div>
                 <div class="forecast-img">
                     <img src="" alt="">
@@ -65,68 +71,102 @@
                     <article class="hourly-forecast-card">
                         <p class="hours">Hours</p>
                         <img src="" alt="">
-                        <var>Temp. <span>&#8451</span></var>
+                        <div class="hoursDetails">
+                            <var>Temp.</var>
+                            <span>&#8451</span>
+                        </div>
                     </article>
                     <article class="hourly-forecast-card">
                         <p class="hours">Hours</p>
                         <img src="" alt="">
-                        <var>Temp. <span>&#8451</span></var>
+                        <div class="hoursDetails">
+                            <var>Temp.</var>
+                            <span>&#8451</span>
+                        </div>                    
                     </article>
                     <article class="hourly-forecast-card">
                         <p class="hours">Hours</p>
                         <img src="" alt="">
-                        <var>Temp. <span>&#8451</span></var>
+                        <div class="hoursDetails">
+                            <var>Temp.</var>
+                            <span>&#8451</span>
+                        </div>                    
                     </article>
                     <article class="hourly-forecast-card">
                         <p class="hours">Hours</p>
                         <img src="" alt="">
-                        <var>Temp. <span>&#8451</span></var>
+                        <div class="hoursDetails">
+                            <var>Temp.</var>
+                            <span>&#8451</span>
+                        </div>
                     </article>
                     <article class="hourly-forecast-card">
                         <p class="hours">Hours</p>
                         <img src="" alt="">
-                        <var>Temp. <span>&#8451</span></var>
+                        <div class="hoursDetails">
+                            <var>Temp.</var>
+                            <span>&#8451</span>
+                        </div>                   
                     </article>
                     <article class="hourly-forecast-card">
                         <p class="hours">Hours</p>
                         <img src="" alt="">
-                        <var>Temp. <span>&#8451</span></var>
+                        <div class="hoursDetails">
+                            <var>Temp.</var>
+                            <span>&#8451</span>
+                        </div>                    
                     </article>
                     <article class="hourly-forecast-card">
                         <p class="hours">Hours</p>
                         <img src="" alt="">
-                        <var>Temp. <span>&#8451</span></var>
+                        <div class="hoursDetails">
+                            <var>Temp.</var>
+                            <span>&#8451</span>
+                        </div>                    
                     </article>
                     <article class="hourly-forecast-card">
                         <p class="hours">Hours</p>
                         <img src="" alt="">
-                        <var>Temp. <span>&#8451</span></var>
+                        <div class="hoursDetails">
+                            <var>Temp.</var>
+                            <span>&#8451</span>
+                        </div>                    
                     </article>
                     <article class="hourly-forecast-card">
                         <p class="hours">Hours</p>
                         <img src="" alt="">
-                        <var>Temp. <span>&#8451</span></var>
+                        <div class="hoursDetails">
+                            <var>Temp.</var>
+                            <span>&#8451</span>
+                        </div>                    
                     </article>
                     <article class="hourly-forecast-card">
                         <p class="hours">Hours</p>
                         <img src="" alt="">
-                        <var>Temp. <span>&#8451</span></var>
+                        <div class="hoursDetails">
+                            <var>Temp.</var>
+                            <span>&#8451</span>
+                        </div>
                     </article>
                     <article class="hourly-forecast-card">
                         <p class="hours">Hours</p>
                         <img src="" alt="">
-                        <var>Temp. <span>&#8451</span></var>
+                        <div class="hoursDetails">
+                            <var>Temp.</var>
+                            <span>&#8451</span>
+                        </div>                    
                     </article>
                     <article class="hourly-forecast-card">
                         <p class="hours">Hours</p>
                         <img src="" alt="">
-                        <var>Temp. <span>&#8451</span></var>
+                        <div class="hoursDetails">
+                            <var>Temp.</var>
+                            <span>&#8451</span>
+                        </div>                    
                     </article>
                 </div>
-                <div class="scroll"></div>
             </section>
         </main>
-        
     </div>
 </body>
 <script src="./script.js"></script>
