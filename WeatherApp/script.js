@@ -31,12 +31,12 @@ const getData = async (event) => {
   // Fetch Details
 
   const fetchData = await fetch(
-    `http://api.weatherapi.com/v1/current.json?key=4ef401b35b964cab89c120253231102&q=${city}`
+    `https://api.weatherapi.com/v1/current.json?key=4ef401b35b964cab89c120253231102&q=${city}`
   );
 
   const orgData = await fetchData.json();
   data = orgData;
-  console.log(data);
+  // console.log(data);
 
   // Displaying the data in HTML
   today_humidity.textContent = data.current.humidity;
@@ -84,7 +84,7 @@ const getData = async (event) => {
     // console.log(icon);
     // console.log(hours);
     // console.log(htemp);
-    const fetchHourlyData = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=4ef401b35b964cab89c120253231102&q=${city}`);
+    const fetchHourlyData = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=4ef401b35b964cab89c120253231102&q=${city}`);
 
     const hourlyData = await fetchHourlyData.json();
     const Data = hourlyData;
