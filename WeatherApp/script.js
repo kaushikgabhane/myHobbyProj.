@@ -45,10 +45,10 @@ const getData = async (event) => {
   today_wind_speed.textContent = data.current.wind_kph; 
   today_rain_chance.textContent = data.current.cloud;
   weatherStatus.innerHTML = data.current.condition.text;
-  country.innerHTML = data.location.country;
-  stateName.innerHTML = data.location.region;
-  date.textContent = data.location.localtime;
-  cityName.innerHTML = data.location.name;
+  country.innerHTML = `Country : ${data.location.country}`;
+  stateName.innerHTML =`State : ${data.location.region}`;
+  cityName.innerHTML = `City : ${data.location.name}`;
+  date.textContent = `Date & Time : ${data.location.localtime}`;
   detailsIcon.setAttribute(`src`,`${data.current.condition.icon}`);
 
 
@@ -56,7 +56,7 @@ const getData = async (event) => {
 
   const x = weatherStatus.innerHTML;
 
-  if (x === 'Clear') {
+  if (x === 'Sunny') {
     container.className = "clear";
   } 
   else if(x === 'Cloudy'){

@@ -92,13 +92,12 @@ body{
     z-index: 0;
 }
 .search-bar{
-    width: max-content;
+    width: fit-content;
     background: transparent;
     border-bottom: 5px solid #c705f8;
     border-left: 5px solid #f80505;
     border-top: 5px solid #1a9744;
     border-right: 5px solid #f80505;
-    width: 60%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -109,6 +108,7 @@ body{
     outline: none;
     border: none;
     height: 50px;
+    width: fit-content;
     font-size:medium;
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
@@ -146,11 +146,8 @@ body{
     width: 150px;
 }
 
-.forecast-details h1{
-    font-size: 40px;
-}
-
-.forecast-details :nth-child(2){
+.forecast-details{
+    font-size: 110%;
     font-weight: 600;
     font-size: large;
 }
