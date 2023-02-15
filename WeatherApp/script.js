@@ -64,9 +64,14 @@ const getData = async (event) => {
   }
   else if(x === 'Mist'){
     container.className = "mist";
-  }else if (x === 'Rain') {
+  }
+  else if (x === 'Rain') {
     container.className = "rain";
-  }else{
+  }
+  else if (x === 'Partly cloudy') {
+    container.className = "partlyCloudy";
+  }
+  else{
     container.className = 'container';
   }
 

@@ -93,11 +93,11 @@ body{
     border-radius: 20px;
     overflow-y: scroll;
     background-image: url(./Assets/partlyCloudySky.jpg);
-    background-size: contain;
+    background-size: cover;
     background-position: bottom;
 }
 
-.container::-webkit-scrollbar, .clear::-webkit-scrollbar, .mist::-webkit-scrollbar, .cloudy::-webkit-scrollbar, .rain::-webkit-scrollbar{
+.container::-webkit-scrollbar, .clear::-webkit-scrollbar, .mist::-webkit-scrollbar, .cloudy::-webkit-scrollbar, .rain::-webkit-scrollbar, .partlyCloudy::-webkit-scrollbar{
     width: 0px;
 }
 
