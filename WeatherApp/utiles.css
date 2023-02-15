@@ -47,3 +47,8 @@
 .hoursDetails{
     display: flex;
 }
+
+
+@media (300px <=width<= 500px){
+    
+}

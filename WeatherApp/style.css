@@ -5,7 +5,8 @@ body{
     overflow: hidden;
     display:flex;
     justify-content: center;
-    background: linear-gradient(#bdc3c7,#2c3e50);
+    background: linear-gradient(to right, #8749bd, #5e25cf);
+    /* background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%); */
     background-blend-mode:exclusion ;
     font-family: 'Roboto Mono', monospace;
 }
@@ -21,6 +22,7 @@ body{
     /* background-repeat:repeat(2); */
     border-radius: 20px;
     box-shadow: 2px 2px 10px #000000;
+    overflow-y: scroll;
 }
 
 .clear{
@@ -35,6 +37,7 @@ body{
     background-image: url(./Assets/clear\ sky.jpg);
     background-size: cover;
     background-position: top;
+    overflow-y: scroll;
 }
 .mist{
     height: 90vh;
@@ -48,6 +51,7 @@ body{
     background-image: url(./Assets/mistWeather.jpg);
     background-size: cover;
     background-position: top;
+    overflow-y: scroll;
 }
 .cloudy{
     height: 90vh;
@@ -61,6 +65,7 @@ body{
     background-image: url(./Assets/cloudy\ wheather.jpg);
     background-size: cover;
     background-position: top;
+    overflow-y: scroll;
 }
 .rain{
     height: 90vh;
@@ -73,7 +78,27 @@ body{
     border-radius: 20px;
     background-image: url(./Assets/rain.jpg);
     background-size: cover;
+    overflow-y: scroll;
     background-position: top;
+}
+
+.partlyCloudy{
+    height: 90vh;
+    width: 90vw;
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-area: "aside main main" ;
+    /* background-repeat:repeat(2); */
+    border-radius: 20px;
+    overflow-y: scroll;
+    background-image: url(./Assets/partlyCloudySky.jpg);
+    background-size: contain;
+    background-position: bottom;
+}
+
+.container::-webkit-scrollbar, .clear::-webkit-scrollbar, .mist::-webkit-scrollbar, .cloudy::-webkit-scrollbar, .rain::-webkit-scrollbar{
+    width: 0px;
 }
 
 .today-forecast{
@@ -89,7 +114,6 @@ body{
     opacity: .6;
     border-right: 5px solid ;
     border-color: #000000 ;
-    z-index: 0;
 }
 .search-bar{
     width: fit-content;
@@ -152,6 +176,11 @@ body{
     font-size: large;
 }
 
+.forecast-details h1{
+    font-size: 50px;
+    margin: 0%;
+}
+
 .hourly-forecast h1{
     width: 90%;
     margin-inline: auto;
@@ -175,4 +204,80 @@ body{
 
 .wrapper::-webkit-scrollbar{
     width: 0px;
+}
+
+
+@media (320px <=width<= 500px){
+
+    .clear, .cloudy, .container, .mist, .rain{
+        display: grid;
+        grid-template-rows: repeat(3,1fr);
+        grid-area: 
+        "aside",
+        "main",
+        "main";
+        overflow-x: hidden;
+    }
+
+    .today-forecast{
+        grid-row: 1/2;
+        grid-column: 1/4;
+        width: 100%;
+        overflow-x: hidden;
+        border-left: 0px;
+        padding-top: 100%;
+    }
+
+    .main-section{
+        grid-row: 2/4;
+        grid-column: 1/4;
+        margin-top: 0px;
+    }
+
+    .weather-forecast , .hourly-forecast h1{
+        /* margin-top: 100px; */
+        width: 100%;
+        margin-inline: 0px;
+    }
+    /* .weather-forecast{
+        display: flex;
+        justify-content: flex-start;
+    } */
+
+    .wrapper{
+        display: flex;
+        /* flex-direction: column; */
+    }
+
+    .forecast-details{
+        font-size: 100%;
+        font-weight: 600;
+        font-size: medium;
+    }
+
+    .forecast-img img{
+        height: 50px;
+        width: 50px;
+        margin-right: 20px;
+    }
+
+    .weather-forecast{
+        margin-left: 10px ;
+    }
+
+    .hourly-forecast h1{
+        margin-inline: 10px;
+    }
+}
+
+@media (400px <=width<=500px){
+    .today-forecast{
+        padding-top: 70%;
+    }
+}
+
+@media (320px <=width<= 400px){
+    .today-forecast{
+        padding-top: 90%;
+    }
 }
