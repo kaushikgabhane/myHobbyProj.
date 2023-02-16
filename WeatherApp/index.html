@@ -5,46 +5,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Toolkit linked for search icon -->
     <script src="https://kit.fontawesome.com/594087ed79.js" crossorigin="anonymous"></script>
 
+
+    <!-- stylesheet linkjed -->
     <link rel="stylesheet" href="./style.css">
 
+
+    <!-- Utility stylesheet linked -->
     <link rel="stylesheet" href="./utiles.css">
 
+
+    <!-- Google fonts link added for font family -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+    <!-- Title for this website -->
     <title>Weather App</title>
 </head>
 <body>
+
+    <!-- Main container -->
     <div class="container">
+
+        <!-- todays forecast section -->
         <aside aria-label="Today's-forecast" class="today-forecast">
+
+            <!-- Search bar section -->
             <form class="search-bar" onsubmit="getData(event)">
                 <input type="text" id="input-city" placeholder="Enter your city name ">
                 <button type="submit" id="submit">
                     <i class="fa-sharp fa-solid fa-magnifying-glass"></i>       
                 </button>
             </form>
+
+            <!-- Today's temperature -->
             <section class="today-temp card">
                 <h4>Today's temp.</h4>
                 <var>---</var>
                 <span>&#8451</span>
             </section>
+
+            <!-- temperature feels like -->
             <section class="today-feels-like card">
                 <h4>Feels like</h4>
                 <var>--- </var>
                 <span>&#8451</span>
             </section>
+
+            <!-- Today's wind speed -->
             <section class="today-wind-speed card">
                 <h4>Wind speed</h4>
                 <var>--- </var>
                 <span>km/hr</span>
             </section>
+
+            <!-- Today's humidity -->
             <section class="today-humidity card">
                 <h4>Humidity</h4>
                 <var>---</var>
                 <span>%</span>
             </section>
+
+            <!-- Today's rain chances -->
             <section class="today-rain-chance card">
                 <h4>Rain chances</h4>
                 <var>---</var>
@@ -52,7 +76,10 @@
             </section>
         </aside>
 
+        <!-- main right section -->
         <main class="main-section">
+
+            <!-- Today's forecast details with location and icon -->
             <section aria-label="weather-forecast" class="weather-forecast">
                 <div class="forecast-details">
                     <h1>Weather Forecast</h1>
@@ -66,6 +93,7 @@
                 </div>
             </section>
 
+            <!-- Hourly forecast section -->
             <section aria-label="Hourly forecast" class="hourly-forecast">
                 <h1>Hourly Temperature</h1>
                 <div class="wrapper">
@@ -266,5 +294,7 @@
         </main>
     </div>
 </body>
+
+<!-- script file linked -->
 <script src="./script.js"></script>
 </html>
