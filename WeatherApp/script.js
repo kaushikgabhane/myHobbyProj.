@@ -90,7 +90,7 @@ const getData = async (event) => {
     const Data = hourlyData;
   
     
-    for(let i=0; i<=24; i++){
+    for(let i=0; i<=23; i++){
 
       // for hourly time
       const y = Data.forecast.forecastday[0].hour[i].time;
