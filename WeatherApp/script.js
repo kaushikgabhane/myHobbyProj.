@@ -1,4 +1,5 @@
 
+//  Elements fetched from 
 const container = document.querySelector(".container");
 const hourlyForecast = document.querySelectorAll(".hourly-forecast-card");
 const hourlyTemp = document.querySelectorAll(".hoursDetails :first-child");
@@ -15,28 +16,31 @@ const cityName = document.querySelector(".forecast-details :nth-child(4)");
 const date = document.querySelector(".forecast-details :nth-child(5)");
 const detailsIcon = document.querySelector(".forecast-img img");
 
-let data;
 
-
+//  Function for listening event 
 const getData = async (event) => {
+
+  //  Method for preventing reload of form on search
   event.preventDefault();
+
+  //  If input fiel is blank then this alert will execute
   if (!inputCity.value) {
     alert("Please Enter The City Name: ");
     return;
   }
 
-  
   const city = inputCity.value;
-
-  // Fetch Details
-
+  
+  // Fetch Details for current weather status
+  
   const fetchData = await fetch(
     `https://api.weatherapi.com/v1/current.json?key=4ef401b35b964cab89c120253231102&q=${city}`
   );
-
+    
+  //  Converting fetched data to json format 
   const orgData = await fetchData.json();
+  let data;
   data = orgData;
-  // console.log(data);
 
   // Displaying the data in HTML
   today_humidity.textContent = data.current.humidity;
@@ -52,7 +56,7 @@ const getData = async (event) => {
   detailsIcon.setAttribute(`src`,`${data.current.condition.icon}`);
 
 
-// Change Background
+// Change Background on different weather conditions
 
   const x = weatherStatus.innerHTML;
 
@@ -75,34 +79,32 @@ const getData = async (event) => {
     container.className = 'container';
   }
 
-    // Hourly forecast
-    const forecastDetails = [...hourlyForecast];
+  // Fetching required elements for Hourly forecast from index.html
+  const forecastDetails = [...hourlyForecast];
+  const hours = forecastDetails.map( ele => ele.firstElementChild);
+  const icon = forecastDetails.map(ele => ele.firstElementChild.nextElementSibling);
+  const htemp =[...hourlyTemp].map(ele => ele);
 
-    const hours = forecastDetails.map( ele => ele.firstElementChild);
-    const icon = forecastDetails.map(ele => ele.firstElementChild.nextElementSibling);
-    const htemp =[...hourlyTemp].map(ele => ele);
-    // console.log(icon);
-    // console.log(hours);
-    // console.log(htemp);
-    const fetchHourlyData = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=4ef401b35b964cab89c120253231102&q=${city}`);
 
-    const hourlyData = await fetchHourlyData.json();
-    const Data = hourlyData;
+  //  Fetching forecast data from API
+  const fetchHourlyData = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=4ef401b35b964cab89c120253231102&q=${city}`);
+  const hourlyData = await fetchHourlyData.json();
+  const Data = hourlyData;
+
   
+  //  Loop for setting fetched forecast data in each card
+  
+  for(let i=0; i<=23; i++){
+    // for hourly time
+    const y = Data.forecast.forecastday[0].hour[i].time;
+    let z = y.split(" ")[1];
+    hours[i].textContent = z;
+   
+    // setting icon
+    icon[i].setAttribute('src',`${Data.forecast.forecastday[0].hour[i].condition.icon}`);
     
-    for(let i=0; i<=23; i++){
-
-      // for hourly time
-      const y = Data.forecast.forecastday[0].hour[i].time;
-      let z = y.split(" ")[1];
-      hours[i].textContent = z;
-      // console.log(hours[i]);
-
-      // setting icon
-      icon[i].setAttribute('src',`${Data.forecast.forecastday[0].hour[i].condition.icon}`);
-      
-      // setting hourly temp.
-      htemp[i].textContent = Data.forecast.forecastday[0].hour[i].temp_c;
-    }
+    // setting hourly temp.
+    htemp[i].textContent = Data.forecast.forecastday[0].hour[i].temp_c;
+  }
 
 };
