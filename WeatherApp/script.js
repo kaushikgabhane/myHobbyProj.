@@ -61,7 +61,8 @@ const getData = async (event) => {
   const x = weatherStatus.innerHTML;
 
   if (x === 'Sunny') {
-    container.className = "clear";
+    container.className = "sunny";
+    detailsIcon.className = "sunImgRotate";
   } 
   else if(x === 'Cloudy'){
     container.className = "cloudy";

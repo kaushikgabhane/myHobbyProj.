@@ -1,3 +1,4 @@
+/*  Body level styling */
 body{
     padding: 0%;
     margin: 0%;
@@ -5,7 +6,10 @@ body{
     overflow: hidden;
     display:flex;
     justify-content: center;
-    background: linear-gradient(to right, #8749bd, #5e25cf);
+    background: #8C88D4;
+    background: -webkit-linear-gradient(left, #8C88D4, #8EEFFD);
+    background: -moz-linear-gradient(left, #8C88D4, #8EEFFD);
+    background: linear-gradient(to right, #8C88D4, #8EEFFD);
     /* background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%); */
     background-blend-mode:exclusion ;
     font-family: 'Roboto Mono', monospace;
@@ -25,7 +29,7 @@ body{
     overflow-y: scroll;
 }
 
-.clear{
+.sunny{
     height: 90vh;
     width: 90vw;
     margin-top: 25px;
@@ -38,6 +42,28 @@ body{
     background-size: cover;
     background-position: top;
     overflow-y: scroll;
+}
+
+.sunImgRotate{
+    animation: rotate 25s steps(1000,end) 1s infinite  none;
+}
+
+@keyframes rotate{
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 .mist{
     height: 90vh;
@@ -97,7 +123,7 @@ body{
     background-position: bottom;
 }
 
-.container::-webkit-scrollbar, .clear::-webkit-scrollbar, .mist::-webkit-scrollbar, .cloudy::-webkit-scrollbar, .rain::-webkit-scrollbar, .partlyCloudy::-webkit-scrollbar{
+.container::-webkit-scrollbar, .sunny::-webkit-scrollbar, .mist::-webkit-scrollbar, .cloudy::-webkit-scrollbar, .rain::-webkit-scrollbar, .partlyCloudy::-webkit-scrollbar{
     width: 0px;
 }
 
